@@ -28,7 +28,7 @@ import java.util.*;
       // Add constructors that call the super constructor
       public DiscountedItem(String n, double p, double s)
       {
-        super(n,p - s);
+        super(n,p);
         discount = s;
       }
       // Add get/set methods for discount
