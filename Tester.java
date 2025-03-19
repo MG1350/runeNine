@@ -45,7 +45,7 @@ import java.util.*;
       @Override
       public String toString()
       {
-         return super.toString() + " (" + super.valueToString(discount) + ")";
+         return super.toString() + " (-" + super.valueToString(discount) + ")";
       }
       // and then the discount in parentheses using the super.valueToString() method
 
