@@ -15,8 +15,8 @@ import java.util.*;
       // Uncomment these to test
       cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
       cart.add(new DiscountedItem("apples", 1.35, 0.25));
-
       cart.printOrder();
+      System.out.println(cart.countDiscountedItems());
     }
   }
 
@@ -71,6 +71,17 @@ import java.util.*;
           if (i instanceof DiscountedItem)
              internalDiscount += ((DiscountedItem) i).getDiscount();
       }
+
+      public int countDiscountedItems() 
+      {
+        int count = 0;
+        for (Item i : order) {
+            if (i instanceof DiscountedItem) {
+                count++;
+            }
+        }
+        return count;
+    }
 
      /** printOrder() will call toString() to print */
       public void printOrder() {
